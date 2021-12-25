@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breast Cancer predictor</title>
+</head>
+<body>
+    <h1>Breast Cancer Prediction</h1>
+    <!-- 'texture_mean', 'perimeter_mean', 'area_mean',
+       'smoothness_mean', 'compactness_mean', 'concavity_mean',
+       'concave points_mean', 'symmetry_mean', 'radius_se', 'perimeter_se',
+       'area_se', 'compactness_se', 'concavity_se', 'concave points_se',
+       'radius_worst', 'texture_worst', 'perimeter_worst', 'area_worst',
+       'smoothness_worst', 'compactness_worst', 'concavity_worst',
+       'concave points_worst', 'symmetry_worst', 'fractal_dimension_worst' -->
+    <div>
+        <center>
+            <form action="{{url_for('predict')}}" method="post">
+                <h2>radius_mean</h2>
+                <input align='center' type="number" step="any" inputmode="decimal" name="radius_mean" placeholder="radius_mean" required='required' width="100px" height="30px"/>
+                <h2>texture_mean</h2>
+                <input align='center' type="number" step="any" inputmode="decimal" name="texture_mean" placeholder="texture_mean" required='required' width="100px" height="30px"/>
+                <h2>perimeter_mean</h2>
+                <input align='center' type="number" step="any" inputmode="decimal" name="perimeter_mean" placeholder="perimeter_mean" required='required' width="100px" height="30px"/>
+                <h2>area_mean</h2>
+                <input align='center' type="number" step="any" inputmode="decimal" name="area_mean" placeholder="area_mean" required='required' width="100px" height="30px"/>
+                <h2>smoothness_mean</h2>
+                <input align='center' type="number" step="any" inputmode="decimal" name="smoothness_mean" placeholder="smoothness_mean" required='required' width="100px" height="30px"/>
+                <h2>compactness_mean</h2>
+                <input align='center' type="number" step="any" inputmode="decimal" name="compactness_mean" placeholder="compactness_mean" required='required' width="100px" height="30px"/>
+                <h2>concavity_mean</h2>
+                <input align='center' type="number" step="any" inputmode="decimal" name="concavity_mean" placeholder="concavity_mean" required='required' width="100px" height="30px"/>
+                <h2>concave points_mean</h2>
+                <input align='center' type="number" step="any" inputmode="decimal" name="concave points_mean" placeholder="concave points_mean" required='required' width="100px" height="30px"/>
+                <h2>symmetry_mean</h2>
+                <input align='center' type="number" step="any" inputmode="decimal" name="symmetry_mean" placeholder="symmetry_mean" required='required' width="100px" height="30px"/>
+                <h2>radius_se</h2>
+                <input align='center' type="number" step="any" inputmode="decimal" name="radius_se" placeholder="radius_se" required='required' width="100px" height="30px"/>
+                <h2>perimeter_se</h2>
+                <input align='center' type="number" step="any" inputmode="decimal" name="perimeter_se" placeholder="perimeter_se" required='required' width="100px" height="30px"/>
+                <h2>area_se</h2>
+                <input align='center' type="number" step="any" inputmode="decimal" name="area_se" placeholder="area_se" required='required' width="100px" height="30px"/>
+                <h2>compactness_se</h2>
+                <input align='center' type="number" step="any" inputmode="decimal" name="compactness_se" placeholder="compactness_se" required='required' width="100px" height="30px"/>
+                <h2>concavity_se</h2>
+                <input align='center' type="number" step="any" inputmode="decimal" name="concavity_se" placeholder="concavity_se" required='required' width="100px" height="30px"/>
+                <h2>concave points_se</h2>
+                <input align='center' type="number" step="any" inputmode="decimal" name="concave points_se" placeholder="concave points_se" required='required' width="100px" height="30px"/>
+                <h2>radius_worst</h2>
+                <input align='center' type="number" step="any" inputmode="decimal" name="radius_worst" placeholder="radius_worst" required='required' width="100px" height="30px"/>
+                <h2>texture_worst</h2>
+                <input align='center' type="number" step="any" inputmode="decimal" name="texture_worst" placeholder="texture_worst" required='required' width="100px" height="30px"/>
+                <h2>perimeter_worst</h2>
+                <input align='center' type="number" step="any" inputmode="decimal" name="perimeter_worst" placeholder="perimeter_worst" required='required' width="100px" height="30px"/>
+                <h2>area_worst</h2>
+                <input align='center' type="number" step="any" inputmode="decimal" name="area_worst" placeholder="area_worst" required='required' width="100px" height="30px"/>
+                <h2>smoothness_worst</h2>
+                <input align='center' type="number" step="any" inputmode="decimal" name="smoothness_worst" placeholder="smoothness_worst" required='required' width="100px" height="30px"/>
+                <h2>compactness_worst</h2>
+                <input align='center' type="number" step="any" inputmode="decimal" name="compactness_worst" placeholder="compactness_worst" required='required' width="100px" height="30px"/>
+                <h2>concavity_worst</h2>
+                <input align='center' type="number" step="any" inputmode="decimal" name="concavity_worst" placeholder="concavity_worst" required='required' width="100px" height="30px"/>
+                <h2>concave points_worst</h2>
+                <input align='center' type="number" step="any" inputmode="decimal" name="concave points_worst" placeholder="concave points_worst" required='required' width="100px" height="30px"/>
+                <h2>symmetry_worst</h2>
+                <input align='center' type="number" step="any" inputmode="decimal" name="symmetry_worst" placeholder="symmetry_worst" required='required' width="100px" height="30px"/>
+                <h2>fractal_dimension_worst</h2>
+                <input align='center' type="number" step="any" inputmode="decimal" name="fractal_dimension_worst" placeholder="fractal_dimension_worst" required='required' width="100px" height="30px"/>
+                
+                <br>
+                <br>
+
+                <button type="submit">Submit</button>
+
+
+            </form>
+        </center>
+    </div>
+
+    <div>
+        <h2>{{ predicted_text }}</h2>
+    </div>
+
+</body>
+</html>
